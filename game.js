@@ -327,7 +327,7 @@ function onDocumentKeyDown(event) {
         } else {
             difficultyPicker.disabled = true;
             npPicker.disabled = true;
-            if (!play) preConfigure();
+            if (!play || parseInt(npPicker.value) != numNP) preConfigure();
             tick = setInterval(function () {
                 moved = true;  // move is true in game
             }, setInterval_time());
